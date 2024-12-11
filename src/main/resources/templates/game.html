@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pedra, Papel, Tesoura</title>
+</head>
+<body>
+
+<h1>Jogo Pedra, Papel, Tesoura</h1>
+
+<form action="/play" method="post">
+    <button name="choice" value="pedra">Pedra</button>
+    <button name="choice" value="papel">Papel</button>
+    <button name="choice" value="tesoura">Tesoura</button>
+</form>
+
+<h2>Score: <span th:text="${score}"></span></h2>
+<h3 th:text="'Resultado: ' + ${result}"></h3>
+<h4>Escolha do Computador: <span th:text="${computerChoice}"></span></h4>
+
+<form action="/reset" method="post">
+    <button type="submit">Zerar Score</button>
+</form>
+
+</body>
+</html>
